@@ -1,7 +1,13 @@
 package com.pluralsight.HotelOperations;
 
 /**
- * *******Add program description here******
+ * Represents a reservation for a hotel room. Contains information regarding the type
+ * of room (King or Double size), the base nightly price of the room, the number of nights
+ * of the reservation, and whether it's a weekend reservation or not. Since having a weekend
+ * reservation increases the price/rate of a room/reservation, the nightly price including the
+ * increased weekend-reservation rate, and the total price of all nights including the increased
+ * weekend-reservation rate.
+ *
  *
  * @author Ravi Spigner
  */

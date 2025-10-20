@@ -1,7 +1,8 @@
 package com.pluralsight.HotelOperations;
 
 /**
- * *******Add program description here******
+ * Simulates few of the operations of a hotel including create a reservation for a room,
+ * check out of a room, clean a room, and allow an employee to punch in or out of their shift.
  *
  * @author Ravi Spigner
  */

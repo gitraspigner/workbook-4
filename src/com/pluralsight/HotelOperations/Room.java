@@ -1,7 +1,9 @@
 package com.pluralsight.HotelOperations;
 
 /**
- * *******Add program description here******
+ * Represents a hotel room. Contains information regarding the number of beds in the room
+ * and the (base) price of the room, whether the room is available or occupied, and if the
+ * room is dirty. Rooms can be checked into, checked out of, or cleaned.
  *
  * @author Ravi Spigner
  */

@@ -1,7 +1,12 @@
 package com.pluralsight.HotelOperations;
 
 /**
- * *******Add program description here******
+ * An employee has an ID number, a name, a department they work within (of the hotel)
+ * their pay rate, the number of hours they've worked for the week, and their punch in
+ * time for the current day. Regular and overtime hours worked can be retrieved. An
+ * employee can punch in or out of their current shift for the current day, and their
+ * time worked for the day is reflected in their time worked for the week (and overtime
+ * if applicable).
  *
  * @author Ravi Spigner
  */
@@ -52,11 +57,7 @@ public class Employee {
     }
 
     public boolean isValidTime(double time) {
-        if (time >= 00.00 && time < 24.00) {
-            return true;
-        } else {
-            return false;
-        }
+        return time >= 00.00 && time < 24.00;
     }
 
     public void punchIn(double time) {

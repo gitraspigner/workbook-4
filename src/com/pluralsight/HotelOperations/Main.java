@@ -34,6 +34,9 @@ public class Main {
         System.out.println("----Employee Data, Punch-Out Time (5PM/17:00)----");
         frontDeskEmployee.punchOut(17.00);
         System.out.println(frontDeskEmployee);
+        System.out.println("----Employee Data, No Args Punch In / Punch Out----");
+        frontDeskEmployee.punchIn();
+        frontDeskEmployee.punchOut();
         System.out.println("----Finished execution without error.----");
     }
 }

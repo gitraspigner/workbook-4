@@ -33,6 +33,15 @@ public class Hotel {
         this.bookedBasicRooms = bookedBasicRooms;
     }
 
+    @Override
+    public String toString() {
+        return  "Hotel ** Hotel Name: " + name +
+                " | Available Suites: " + getAvailableSuites() +
+                " | Available Rooms: " + getAvailableRooms() +
+                " | Booked Suites: " + bookedSuites +
+                " | Booked Rooms: " + bookedBasicRooms;
+    }
+
     public int getAvailableSuites() {
         return this.numberOfSuites-this.bookedSuites;
     }
@@ -57,5 +66,24 @@ public class Hotel {
                 return false;
             }
         }
+    }
+
+    public boolean unbookRoom(int numberOfRooms, boolean isSuite) {
+        if (isSuite) {
+            if (numberOfRooms <= this.bookedSuites) {
+                this.bookedSuites -= numberOfRooms;
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (numberOfRooms <= this.bookedBasicRooms) {
+                this.bookedBasicRooms -= numberOfRooms;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
     }
 }

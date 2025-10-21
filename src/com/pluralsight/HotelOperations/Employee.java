@@ -1,5 +1,7 @@
 package com.pluralsight.HotelOperations;
 
+import java.time.LocalTime;
+
 /**
  * An employee has an ID number, a name, a department they work within (of the hotel)
  * their pay rate, the number of hours they've worked for the week, and their punch in
@@ -58,6 +60,29 @@ public class Employee {
 
     public boolean isValidTime(double time) {
         return time >= 00.00 && time < 24.00;
+    }
+
+    public void punchIn() {
+        LocalTime timeNow = LocalTime.now();
+        double timeAsDouble = timeNow.getHour() + (timeNow.getMinute() / 60.0);
+        if (isValidTime(timeAsDouble)) {
+            setPunchInTime(timeAsDouble);
+            System.out.println("Punch In Successful!");
+        } else {
+            System.out.println("Punch In Unsuccessful.");
+        }
+    }
+
+    public void punchOut() {
+        LocalTime timeNow = LocalTime.now();
+        double timeAsDouble = timeNow.getHour() + (timeNow.getMinute() / 60.0);
+        if (isValidTime(timeAsDouble) && timeAsDouble >= getPunchInTime()) {
+            setHoursWorked(getHoursWorked() + (timeAsDouble - getPunchInTime()));
+            System.out.println("Punch Out Successful! Hours Worked Added.");
+            setPunchInTime(-1.00);
+        } else {
+            System.out.println("Punch Out Unsuccessful.");
+        }
     }
 
     public void punchIn(double time) {

@@ -8,7 +8,7 @@ import java.util.Collections;
  * @author Ravi Spigner
  */
 public class Deck {
-    private ArrayList<Card> cards;
+    private final ArrayList<Card> cards;
     public Deck(){
         cards = new ArrayList<>();
         String[] suits = {"Hearts","Spades","Diamonds","Clubs"};

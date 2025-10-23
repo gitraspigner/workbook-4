@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Ravi Spigner
  */
 public class Hand {
-    private ArrayList<Card> cards;
+    private final ArrayList<Card> cards;
     public Hand(){
         cards = new ArrayList<>();
     }

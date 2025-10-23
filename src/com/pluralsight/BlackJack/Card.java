@@ -6,8 +6,8 @@ package com.pluralsight.BlackJack;
  * @author Ravi Spigner
  */
 public class Card {
-    private String suit;
-    private String value;
+    private final String suit;
+    private final String value;
     private boolean isFaceUp;
     public Card(String suit, String value) {
         this.suit = suit;

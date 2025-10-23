@@ -71,22 +71,28 @@ public class BlackJack {
         System.out.println("----Play Another Game?----");
         while (true) {
             System.out.print("Please enter your choice (1-Yes, 2-No): ");
-            String choice = scanner.nextLine().trim();
-            if (!isNumber(choice)) {
-                System.out.println("-------------------");
-                System.out.println("ERROR: " + choice + " is not a number");
-                System.out.println("-------------------");
-            } else {
-                int choiceInt = Integer.parseInt(choice);
-                if (choiceInt == 1) {
-                    return false;
-                } else if (choiceInt == 2) {
-                    return true;
+            try {
+                String choice = scanner.nextLine().trim();
+                if (!isNumber(choice)) {
+                    System.out.println("-------------------");
+                    System.out.println("ERROR: " + choice + " is not a number");
+                    System.out.println("-------------------");
                 } else {
-                    System.out.println("You entered an invalid number, only 1 and 2 are valid" +
-                            " numbers.");
+                    int choiceInt = Integer.parseInt(choice);
+                    if (choiceInt == 1) {
+                        return false;
+                    } else if (choiceInt == 2) {
+                        return true;
+                    } else {
+                        System.out.println("You entered an invalid number, only 1 and 2 are valid" +
+                                " numbers.");
+                    }
                 }
+            } catch (Exception e) {
+                System.out.println("You entered an invalid number, only 1 and 2 are valid" +
+                        " numbers.");
             }
+
         }
     }
     public static boolean isNumber(String input) {

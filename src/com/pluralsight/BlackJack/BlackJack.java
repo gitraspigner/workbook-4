@@ -6,12 +6,12 @@ import java.util.Scanner;
  * @author Ravi Spigner
  */
 public class BlackJack {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     private static String player1;
     private static String player2;
     private static Hand player1Hand;
     private static Hand player2Hand;
-    private static Deck deck = new Deck();
+    private static final Deck deck = new Deck();
     public static void main(String[] args) {
         playGame();
     }

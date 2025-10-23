@@ -1,7 +1,5 @@
 package com.pluralsight.BlackJack;
-
 import java.util.ArrayList;
-
 /**
  * This class was not written by me, but was edited by me, and is from the
  * workbook of the week to represent a hand used in the BlackJack exercise/application.
@@ -48,7 +46,6 @@ public class Hand {
             }
         }
     }
-
     //I wrote this method @author Ravi Spigner
     public void flipAllCards() {
         for(Card c : cards) {

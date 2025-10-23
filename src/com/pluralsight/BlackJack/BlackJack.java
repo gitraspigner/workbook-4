@@ -1,7 +1,5 @@
 package com.pluralsight.BlackJack;
-
 import java.util.Scanner;
-
 /**
  * *******Add program description here******
  *
@@ -9,22 +7,17 @@ import java.util.Scanner;
  */
 public class BlackJack {
     private static Scanner scanner = new Scanner(System.in);
-
     private static String player1;
     private static String player2;
     private static Hand player1Hand;
     private static Hand player2Hand;
     private static Deck deck = new Deck();
-
-
     public static void main(String[] args) {
         playGame();
     }
-
     public static void displayWelcome() {
         System.out.println("----Welcome to BlackJack----");
     }
-
     public static void playGame() {
         displayWelcome();
         getPlayerNames();
@@ -37,7 +30,6 @@ public class BlackJack {
         }
         displayGameOver();
     }
-
     public static void shuffleAndDeal() {
         System.out.println("----Shuffling Deck...----");
         deck.shuffle();
@@ -50,7 +42,6 @@ public class BlackJack {
         player2Hand.Deal(deck.deal());
         System.out.println("----Cards Have Been Dealt!----");
     }
-
     public static void results() {
         System.out.println("----Results:----");
         player1Hand.flipAllCards();
@@ -73,11 +64,9 @@ public class BlackJack {
             System.out.println("****It's A Tie!****");
         }
     }
-
     public static void displayGameOver() {
         System.out.println("----Game Over! Thanks for Playing!----");
     }
-
     public static boolean isGameOver() {
         System.out.println("----Play Another Game?----");
         while (true) {
@@ -98,10 +87,8 @@ public class BlackJack {
                             " numbers.");
                 }
             }
-
         }
     }
-
     public static boolean isNumber(String input) {
         try {
             Double.parseDouble(input); //will return true for doubles/decimals and ints
@@ -110,15 +97,10 @@ public class BlackJack {
             return false;
         }
     }
-
-
     public static void getPlayerNames() {
         System.out.print("Please enter Player 1's name: ");
         player1 = scanner.nextLine();
         System.out.print("Please enter Player 2's name: ");
         player2 = scanner.nextLine();
     }
-
-
-
 }

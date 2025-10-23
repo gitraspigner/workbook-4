@@ -1,5 +1,4 @@
 package com.pluralsight.BlackJack;
-
 /**
  * This class was not written by me, but was edited by me, and is from the
  * workbook of the week to represent a card used in the BlackJack exercise/application.

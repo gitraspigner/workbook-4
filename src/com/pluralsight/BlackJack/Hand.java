@@ -21,6 +21,7 @@ public class Hand {
     }
     // The Hand uses the methods of each card to determine
     // the value of each card - and adds up all values
+    //I modified this method @author Ravi Spigner
     public int getValue(){
         int value = 0;
         for(Card card: cards){

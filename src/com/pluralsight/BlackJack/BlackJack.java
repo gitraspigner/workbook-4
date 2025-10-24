@@ -1,7 +1,7 @@
 package com.pluralsight.BlackJack;
 import java.util.Scanner;
 /**
- *
+ * Simulates a game of Blackjack between 2 players.
  *
  * @author Ravi Spigner
  */

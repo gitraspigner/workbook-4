@@ -1,7 +1,7 @@
 package com.pluralsight.BlackJack;
 import java.util.Scanner;
 /**
- * *******Add program description here******
+ *
  *
  * @author Ravi Spigner
  */
@@ -54,11 +54,17 @@ public class BlackJack {
         System.out.println("-" + player1 +"'s Point total: " + player1Points);
         int player2Points = player2Hand.getValue();
         System.out.println("-" + player2 +"'s Point total: " + player2Points);
-        if (player1Points > player2Points) {
+        if (player1Points > player2Points && player1Points <= 21) {
             System.out.println("****" + player1 + " Wins, By " + (player1Points-player2Points) +
                     " Points!****");
-        } else if (player1Points < player2Points) {
+        } else if (player2Points > player1Points  && player2Points <= 21) {
             System.out.println("****" + player2 + " Wins, By " + (player2Points-player1Points) +
+                    " Points!****");
+        } else if (player1Points > 21) {
+            System.out.println("****" + player2 + " Wins, By " + (player2Points-player1Points) +
+                    " Points!****");
+        } else if (player2Points > 21) {
+            System.out.println("****" + player1 + " Wins, By " + (player1Points-player2Points) +
                     " Points!****");
         } else {
             System.out.println("****It's A Tie!****");
